@@ -1,0 +1,77 @@
+@import "_mq.scss";
+@import "_mixins";
+@import "_variables";
+@import "_main.scss";
+
+@import "_accordion.scss";
+// @import "../global/fonts.scss";
+
+body{
+    // font-family: 'CircularStd-Medium';
+    font-family:'AR';
+    background: #F3F2F0;
+    line-height: 1.5;
+}
+
+* {
+    margin: 0;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.bg-grad-wrapper {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    overflow-x: hidden;
+    top: 0%;
+    right: 0%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    z-index: -1;
+  
+    @include mq($until: mobileSmall) {
+      height: 100vh;
+    }
+  }
+  
+  .bg-gra {
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    right: -20%;
+    z-index: 0;
+    background: radial-gradient(33.02% 49.61% at 18.72% 50%, #FFA178 10.36%, rgba(226, 222, 217, 0) 100%);
+    transform: rotate(-180deg);
+    filter: blur(110px);
+  }
+  
+  .bg-gra-blue {
+    position: absolute;
+    width: 80%;
+    height: 40%;
+    left: 6px;
+    top: 0px;
+    background: radial-gradient(50% 83.84% at 0% 5.61%, #96F0FF 4.65%, rgba(226, 222, 217, 0) 88.85%);
+    filter: blur(110px);
+  }
+
+  .main-title {
+    font-size: 56px;
+    line-height: 73px;
+    font-family: sb;
+    text-align: center;
+}
+
+.main-title-detail {
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #282832;
+}
+
+.mb-80 {
+  margin-bottom: 80px;
+}

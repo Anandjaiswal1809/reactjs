@@ -1,0 +1,190 @@
+@import "../global/_common.scss";
+
+header {
+    @include flex;
+    @include justify-space-between;
+    @include align-center;
+
+
+    #menuControlOpen {
+        display: none;
+    }
+
+    #menuControlOpen {
+        display: none;
+
+        @include mq($until: desktop) {
+            display: inline-block;
+        }
+    }
+
+    .menu {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 0;
+        overflow: hidden;
+        @include transition(all 0.3s ease-in-out);
+        background-color: #e9e9e9;
+
+        @include mq($from: desktop) {
+            position: static;
+            overflow: visible;
+            background-color: transparent;
+            width: auto;
+            height: auto;
+        }
+
+
+        .menu-control-close {
+            right: 7%;
+            font-size: 41px;
+            top: 0%;
+            display: none;
+
+            @include mq($until: desktop) {
+                display: inline-block;
+                text-align: right;
+                padding-right: 20px;
+                width: 100%;
+            }
+        }
+
+        nav {
+            @include flex;
+            @include flex-direction-row;
+            @include align-center;
+
+            @include mq($until: desktop) {
+                @include flex;
+                @include flex-direction-column;
+                @include align-start;
+            }
+
+
+            .menu-h {
+                list-style: none;
+                padding: 0px;
+                @include flex;
+
+                @include mq($until: desktop) {
+                    @include flex;
+                    @include flex-direction-column;
+                }
+            }
+
+            .dropdown {
+                .dropdown-content {
+                    position: absolute;
+                    background-color: #f9f9f9;
+                    width: 100%;
+                    right: 0;
+                    top: 57px;
+                    opacity: 0;
+                    visibility: hidden;
+                    z-index: 1;
+                    transition: all .5s ease-in-out;
+
+                    .accordion-container {
+                        width: 100%;
+
+                        .submenu-title{
+
+                            &.t-open{
+                                &:after {
+                                    transform: scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(45deg) translate3d(0px, 0px, 0px) skew(0deg, 0deg);
+                                }
+                            }
+                            &:after {
+                                content: "";
+                                width: 10px;
+                                height: 10px;
+                                border: 2px solid red;
+                                border-top-width: 0;
+                                border-left-width: 0;
+                                transform: scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(-45deg) translate3d(0px, 0px, 0px) skew(0deg, 0deg);
+                                display: none;
+
+                                @include mq($until: desktop) {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+
+                    #close-submenu {
+                        display: none;
+
+                        @include mq($until: desktop) {
+                            @include flex;
+                            font-size: 41px;
+                            justify-content: end;
+                            padding: 16px;
+                            justify-content: 0%;
+                        }
+                    }
+
+                    @include mq($until: desktop) {
+                        position: fixed;
+                        height: 100%;
+                        top: 0;
+                        width: 80%;
+                        transform: translateX(100%);
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+
+            li {
+                padding-left: 25px;
+                font-size: 16px;
+                color: #000;
+                text-decoration: none;
+
+                .post_content {
+                    ul {
+                        padding: 0px;
+                        display: flex;
+                        flex-direction: column;
+
+                        li {
+                            padding-left: 0px;
+                            font-size: 16px;
+                            color: #000;
+                            text-decoration: none;
+                            list-style: none;
+                        }
+                    }
+                }
+
+                &:hover {
+                    .dropdown-content {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+
+                @include mq($until: desktop) {
+                    margin-bottom: 18px;
+                    padding: 6px 15px;
+                    font-size: 20px;
+                    cursor: pointer;
+                    display: inline-block;
+                }
+            }
+
+            &.submenu-open {
+                .dropdown {
+                    pointer-events: none;
+
+                    .dropdown-content {
+                        pointer-events: all;
+                        transform: translateX(0);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.find-section {
+    display: flex;
+    justify-content: center;
+    padding: 289px 0px 111px 0px;
+
+    .find-detail {
+        font-size: 66px;
+        width: 789px;
+        text-align: center;
+        font-family:sb;
+        // margin-top: 289px;
+
+        .find-button {
+            width: 367px;
+            height: 60px;
+            background: #96F0FF;
+            box-shadow: 0px 4px 8px rgba(193, 182, 168, 0.7);
+            border-radius: 30px;
+            border: none;
+            font-size: 20px;
+            line-height: 23px;
+            display: inline-block;
+            text-decoration: none;
+            color: #000;
+            padding: 15px;
+            font-family: AR;
+        }
+    }
+}

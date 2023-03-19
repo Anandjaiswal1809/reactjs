@@ -1,0 +1,97 @@
+@import "../global/_common.scss";
+
+header {
+    position: absolute;
+    width: 100%;
+
+    .main-header {
+        @include flex;
+        @include align-center;
+        position: relative;
+        padding: 30px;
+        justify-content: space-between;
+
+        .header-left {
+            @include flex;
+            @include align-center;
+            float: left;
+            -webkit-box-align: center;
+            z-index: 999999;
+
+            a {
+                text-decoration: none;
+
+                #open-drawer {
+                    cursor: pointer;
+                    font-size: 28px;
+                    margin-right: 10px;
+                }
+            }
+
+            .sub-menu {
+                position: absolute;
+                right: 0;
+                top: 0;
+                overflow: inherit;
+                width: 100%;
+                height: 100vh;
+                transition: all 0.3s ease-in-out;
+                transform: translateX(0);
+                background: linear-gradient(to bottom, rgba(9, 49, 81, 0.6) 0%, rgba(9, 49, 81, 0.4) 100%);
+
+                #drawer-open {
+                    position: absolute;
+                    background-color: #fff;
+                    top: 85px;
+                    right: 0;
+                    width: 100%;
+                    transition: all 0.3s ease-in-out;
+
+                    .submenu-content {
+                        display: flex;
+
+                        .menu-content {
+                            width: 25%;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .header-middle {
+            // float: none;
+            // position: absolute;
+            // top: 50%;
+            // left: 50%;
+            // transform: translate(-50%, -50%);
+
+            @include mq($until: desktopLarge) {
+                display: none;
+            }
+
+            ul {
+                display: flex;
+                list-style: none;
+                padding: 0;
+
+                li {
+                    float: left;
+                    color: #282832;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .header-right {
+        float: right;
+
+        @include mq($until: desktopLarge) {
+            display: none;
+        }
+    }
+}

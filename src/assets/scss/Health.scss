@@ -1,0 +1,114 @@
+
+// @import "../scss/global/common.scss";
+// @import "../scss/global/_slick-slide.scss";
+
+.treament-section {
+    .slick-slider {
+        .slick-slide {
+            height: auto;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 8px #e2ded9;
+            border-radius: 10px;
+            padding: 25px 20px;
+            margin: 97px 10px 117px 10px;
+            width: 270px !important;
+
+            .health-title {
+                font-size: 30px;
+                line-height: 34px;
+                font-feature-settings: 'salt' on;
+                color: #282832;
+                height: 57px;
+                margin-top: 30px;
+            }
+
+            .health-details {
+                height: 86px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 18px;
+                color: #7E7E84;
+            }
+
+            a {
+                max-width: 254px;
+                height: 40px;
+                border: 1px solid #282832;
+                border-radius: 25px;
+                font-size: 16px;
+                line-height: 18px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+                justify-content: center;
+                text-decoration: none;
+                color: #282832;
+            }
+        }
+    }
+}
+
+// .treament-section .slick-slider .slick-list .slick-track .slick-slide
+
+.treament-section {
+    margin-top: 217px;
+
+    .slider {
+        .slick-list {
+            .slide {
+                &.slide-items {
+                    &.slick-slide {
+                        // width: 305px !important;
+                        // height: auto;
+                        // background: #FFFFFF;
+                        // box-shadow: 0px 4px 8px #e2ded9;
+                        // border-radius: 10px;
+                        // padding: 25px 20px;
+                        // // margin-bottom: 117px;
+                        // margin: 97px 10px 117px 10px;
+
+                        img.img-health {
+                            width: 94px;
+                        }
+
+                        .health-title {
+                            font-size: 30px;
+                            line-height: 34px;
+                            font-feature-settings: 'salt' on;
+                            color: #282832;
+                            height: 57px;
+                            margin-top: 30px;
+                        }
+
+                        .health-details {
+                            // width: 250px;
+                            height: 86px;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 18px;
+                            color: #7E7E84;
+                        }
+
+                        a {
+                            max-width: 254px;
+                            height: 40px;
+                            border: 1px solid #282832;
+                            border-radius: 25px;
+                            font-size: 16px;
+                            line-height: 18px;
+                            display: flex;
+                            align-items: center;
+                            text-align: center;
+                            width: 100%;
+                            justify-content: center;
+                            text-decoration: none;
+                            color: #282832;
+                    
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

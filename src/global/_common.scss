@@ -1,0 +1,82 @@
+@import "mq";
+@import "mixins";
+@import "variables";
+
+@import "../global/fonts";
+// @import "../global/requirement";
+
+body{
+  margin: 0;
+  // font-family: 'CircularStd-Medium';
+  background: #E2DED9;
+  line-height: 1.5;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    max-width: 1200px;
+    padding: 20px 20px;
+}
+
+.bg-grad-wrapper {
+    width: 100%;
+    height: 200vh;
+    position: absolute;
+    overflow-x: hidden;
+    top: 0%;
+    right: 0%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    z-index: -1;
+  
+    @include mq($until: mobileSmall) {
+      height: 100vh;
+    }
+  }
+  
+  .bg-gra {
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    right: -20%;
+    z-index: 0;
+    background: radial-gradient(33.02% 49.61% at 18.72% 50%, #FFA178 10.36%, rgba(226, 222, 217, 0) 100%);
+    transform: rotate(-180deg);
+    filter: blur(110px);
+  }
+  
+  .bg-gra-blue {
+    position: absolute;
+    width: 80%;
+    height: 40%;
+    left: 6px;
+    top: 0px;
+    background: radial-gradient(50% 83.84% at 0% 5.61%, #96F0FF 4.65%, rgba(226, 222, 217, 0) 88.85%);
+    filter: blur(110px);
+  }
+
+  .overlay {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+    background: linear-gradient(to bottom, rgba(9, 49, 81, 0.6) 0%, rgba(9, 49, 81, 0.4) 100%);
+}
+
+//   main {
+//     padding-top: 80px;
+// }
+
+section.Medical.advisor {
+  position: relative;
+}
+
+
+
+

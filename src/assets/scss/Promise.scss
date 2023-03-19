@@ -1,0 +1,58 @@
+
+@import "../scss/global/common.scss";
+
+
+.promise-content {
+    @include flex;
+    // display: flex;
+    @include flex-wrap;
+    // flex-wrap: wrap;
+    margin-bottom: 60px;
+
+    &:nth-child(even) {
+        @include flex-row-reverse;
+        // -webkit-box-orient: horizontal;
+        // -webkit-box-direction: reverse;
+        // -ms-flex-direction: row-reverse;
+        // flex-direction: row-reverse;
+        // -webkit-box-pack: justify;
+    }
+
+        .pro1 {
+            @include flex;
+            @include justify-center;
+            @include align-center;
+            width: 50%;
+            flex: 0 0 50%;
+
+            .w-330 {
+                max-width: 370px;
+                text-align: center;
+            }
+
+            @include mq($until: tabletSmall) {
+                width: 100%;
+                flex: 0 0 100%;
+            }
+
+            
+
+            img.pro-icon {
+                display: inline;
+            }
+
+            .pro-title {
+                font-size: 30px;
+                line-height: 32px;
+                text-align: center;
+                color: #282832;
+                height: 45px;
+            }
+
+            .pro-details {
+                font-size: 16px;
+                line-height: 18px;
+                color: #282832;
+            }
+        }
+    }

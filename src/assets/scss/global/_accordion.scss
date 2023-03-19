@@ -1,0 +1,91 @@
+.footer-coll {
+    width: 25%;
+
+    @include mq($until: tabletSmall) {
+        width: 100%;
+    }
+}
+
+.accordion-container {
+    @include flex;
+    @include flex-wrap;
+    width: 100%;
+
+    .accordion-block {
+        width: 25%;
+
+        @include mq($until: desktop) {
+            width: 100%;
+        }
+
+        .custom-accordion-title {
+            @include flex;
+            @include justify-space-between;
+            pointer-events: none;
+            padding: 18px 0;
+
+            &:after {
+                display: none;
+
+                @include mq($until: desktop) {
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    border: 2px solid $-turquoise-50;
+                    border-top-width: 0;
+                    border-left-width: 0;
+                    transform: scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(45deg) translate3d(0px, 0px, 0px) skew(0deg, 0deg);
+                    display: block;
+                }
+            }
+
+
+            &.t-open {
+                &:after {
+                    transform: scale3d(1, 1, 1) rotateX(180deg) rotateY(0deg) rotateZ(45deg) translate3d(0px, 0px, 0px) skew(0deg, 0deg);
+                }
+            }
+
+            @include mq($until: desktop) {
+                pointer-events: all;
+                padding: 15px 0;
+            }
+
+            span {
+                &.title-text {
+                    // font-size: 16px;
+                    line-height: 18px;
+                    margin-bottom: 29px;
+                    color: $-turquoise-50;
+                }
+            }
+        }
+
+        .custom-accordion-content {
+            display: block;
+
+            @include mq($until: desktop) {
+                display: none;
+            }
+
+            ul {
+                &.footer-menu {
+                    list-style: none;
+                    margin: 0px;
+                    padding: 0px;
+
+                    li {
+                        padding: 2px 0;
+                        margin: 5px 0;
+                        font-size: 16px;
+
+                        a {
+                            color: $-stoneGray-20;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
